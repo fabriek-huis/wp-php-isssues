@@ -2,11 +2,12 @@
 
 
 **1. Assuming there is a file named "w-content/plugins/hello-world.php" with the following content. What is this missing to be called a plugin and run properly?**
-
+```php
 ~~<?php add_filter('the_content', 'hello_world');
 function hello_world($content){
 return $content . " Hello World ";
 }~~
+```
 
 **Answer >**
 Please see the attached "hello-world.php" file.
@@ -15,10 +16,11 @@ I added some comments to the code.
 
 
 **2. What is a potential problem in the following snippet of code from a WordPress theme file named "footer.php"?**
-
+```html
 ~~</section><!-end of body section--> <footer>All rights reserved</footer>
 </body>
 </htm|>~~
+```
 
 **Answer >**
 The HTML Element Reference has the incorrect HTML it has a vertical bar "|" in the </html> closing tag.
