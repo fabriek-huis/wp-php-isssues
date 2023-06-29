@@ -23,9 +23,9 @@ I added some comments to the code.
 ```
 
 **Answer >**
-The HTML Element Reference has the incorrect HTML it has a vertical bar "|" in the </html> closing tag.
+The HTML Element Reference has the incorrect HTML it has a vertical bar "|" in the ```</html>``` closing tag.
 
-I don't know what the rest of the Theme code structure looks like theres a closing </section> tag too.
+I don't know what the rest of the Theme code structure looks like theres a closing ```</section>``` tag too.
 So its impossible to know if thats also incorrect.  
 
 
@@ -41,17 +41,17 @@ plugin_dir_url( __FILE__ ).'js/jquery-my-script.js'
 ```
 
 **Answer >**
-If you using “wp_enqueue_script” function you need to pass a URI() not an absolute DIR (directory).
+If you using **“wp_enqueue_script”** function you need to pass a URI() not an absolute DIR (directory).
 
-* Presuming this is run from the Theme “functions.php” file.
+* Presuming this is run from the Theme **“functions.php”** file.
 
 The path is incorrect -
-plugin_dir_url( __FILE__ ).'js/jquery-my-script.js'
+```plugin_dir_url( __FILE__ ).'js/jquery-my-script.js'```
 
 Points to (in my local development environment) -
-http://domain/wp-content/plugins/Users/kurt/Local Sites/drew/app/public/wp-content/themes/themename/js/jquery-my-script.js
+```http://domain/wp-content/plugins/Users/kurt/Local Sites/drew/app/public/wp-content/themes/themename/js/jquery-my-script.js```
 
-So you could use “get_template_directory_uri()”
+So you could use **“get_template_directory_uri()”**
 
 **Updated snippet -**
 ```php
@@ -76,7 +76,7 @@ mysql_query("INSERT into table_name (col1, col2, col3) VALUES ('$value1', '$valu
 
 **$wpdb** is essentially the Wordpress database connection class.
 
-Use the “prepare” function to protect queries against SQL injection attacks. 
+Use the **“prepare”** function to protect queries against SQL injection attacks. 
 
 **Answer >**
 ```php
