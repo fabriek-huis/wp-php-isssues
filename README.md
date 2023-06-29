@@ -3,10 +3,10 @@
 
 **1. Assuming there is a file named "w-content/plugins/hello-world.php" with the following content. What is this missing to be called a plugin and run properly?**
 ```php
-~~<?php add_filter('the_content', 'hello_world');
+<?php add_filter('the_content', 'hello_world');
 function hello_world($content){
 return $content . " Hello World ";
-}~~
+}
 ```
 
 **Answer >**
@@ -17,9 +17,9 @@ I added some comments to the code.
 
 **2. What is a potential problem in the following snippet of code from a WordPress theme file named "footer.php"?**
 ```html
-~~</section><!-end of body section--> <footer>All rights reserved</footer>
+</section><!-end of body section--> <footer>All rights reserved</footer>
 </body>
-</htm|>~~
+</htm|>
 ```
 
 **Answer >**
@@ -31,13 +31,13 @@ So its impossible to know if thats also incorrect.
 
 **3. What is wrong with this script?**
 ```php
-~~add_my_script();
+add_my_script();
 function add_my_script(){
 wp_enqueue_script(
 'jquery-my-script',
 plugin_dir_url( __FILE__ ).'js/jquery-my-script.js'
 );
-}~~
+}
 ```
 
 **Answer >**
@@ -68,10 +68,10 @@ add_my_script();
 
 **4. What is the $wed variable and how could you improve the code below?**
 ```php
-~~<?php
+<?php
 function perform database action({
 mysql_query("INSERT into table_name (col1, col2, col3) VALUES ('$value1', '$value2', '$value3");
-}~~
+}
 ```
 
 **$wpdb** is essentially the Wordpress database connection class.
